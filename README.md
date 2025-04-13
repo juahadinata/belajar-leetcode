@@ -20,7 +20,7 @@ kembalikan **indeks** dari dua angka sedemikian rupa sehingga `nums[i] + nums[j]
 ## 🧮 Contoh Input dan Output
 
 ### Input
-```plaintext
+```dart
 nums = [3, 2, 4, 7, 11, 15]
 target = 9
 ```
