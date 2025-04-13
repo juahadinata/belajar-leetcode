@@ -48,3 +48,21 @@ keuntungan maksimum** dari satu kali transaksi — yaitu membeli **sebelum** men
 ```dart
 Input:  prices = [7, 1, 5, 3, 6, 4]
 Output: 5
+``` 
+
+# 3. 🧠 Contains Duplicate Algorithm
+
+## 📌 Deskripsi Masalah
+Diberikan sebuah array `nums`, tentukan apakah array tersebut mengandung elemen yang **duplikat**.
+
+- Return `true` jika ada nilai yang muncul **lebih dari sekali**.
+- Return `false` jika setiap elemen **unik**.
+
+## 📥 Contoh Input & Output
+
+```text
+Input:  nums = [1, 2, 3, 4]
+Output: false
+
+Input:  nums = [1, 2, 3, 1]
+Output: true
