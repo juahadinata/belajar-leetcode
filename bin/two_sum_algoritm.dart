@@ -4,8 +4,8 @@ List<int> twoSum(List<int> nums, int target) {
   for (int i = 0; i < nums.length; i++) {
     int pelengkap = target - nums[i];
 
-    print('$target - ${nums[i]} = $pelengkap');
-    print(terlihat);
+    // print('$target - ${nums[i]} = $pelengkap');
+    // print(terlihat);
 
     if (terlihat.containsKey(pelengkap)) {
       return [terlihat[pelengkap]!, i];
