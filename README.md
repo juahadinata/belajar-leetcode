@@ -5,7 +5,7 @@
 untuk mencari dua angka dalam sebuah array yang jika dijumlahkan 
 akan menghasilkan sebuah target tertentu.  
 
-####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode)
+####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/two_sum.md)
 
 ---
 
