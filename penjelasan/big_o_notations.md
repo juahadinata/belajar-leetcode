@@ -202,6 +202,6 @@ Jadi, meskipun datanya 1 juta, paling -paling cuma butuh sekitar 20 langkah untu
 - Kita memotong masalah jadi setengah setiap kali.
 - Pertumbuhannya sangat lambat walau datanya sangat besar.
 - Biasanya muncul di algoritma seperti:
-        - Binary Search
-        - Struktur data seperti Binary Search Tree, Heap
-        - Beberapa algoritma sorting & pencarian canggih
+  - Binary Search
+  - Struktur data seperti Binary Search Tree, Heap
+  - Beberapa algoritma sorting & pencarian canggih
