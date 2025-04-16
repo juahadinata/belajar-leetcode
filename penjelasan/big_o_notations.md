@@ -354,8 +354,75 @@ Pasangan: (2, 4)
 - Biasanya coba semua pasangan kemungkinan
 - Cocok hanya untuk data kecil
 ##### *Kapan Terjadi?*
-Algoritma dengan O(n²) muncul di:
+Algoritma dengan `O(n²)` muncul di:
 - Sorting sederhana: Bubble sort, Insertion sort, Selection sort
 - Brute-force matching
 - Graf traversal tanpa optimasi
 - Algoritma dasar dalam kompetisi coding (kadang memang diminta pakai brute force dulu)
+
+#### 6. O(n³)
+##### *Apa Itu O(n³)?*
+O(n³) artinya:
+Jumlah langkah akan tumbuh sebanding dengan pangkat tiga dari ukuran input.
+
+Kalau n = 10, maka langkah bisa sampai 10 × 10 × 10 = 1000.
+Kalau n = 100, bisa sampai 1 juta langkah 😱
+
+##### 📦 *Analogi Simpel*
+Bayangin kamu punya n siswa, dan kamu ingin mengecek semua kombinasi kelompok yang terdiri dari 3 siswa.
+
+Contoh:
+```
+(Alice, Bob, Charlie)
+(Alice, Bob, David)
+```
+Total kombinasi mendekati: n × n × n = O(n³)
+
+##### 🧠 *Contoh Kasus Nyata*
+1. Tiga Loop Bersarang (Triple Nested Loop)
+Misalnya kamu ingin:
+
+Mencari semua triplet (a, b, c) dari array yang jumlahnya sama dengan target tertentu.
+
+##### *Kode Dart – Contoh O(n³)*
+```dart
+void main() {
+  List<int> data = [1, 2, 3, 4, 5];
+  int target = 9;
+
+  for (int i = 0; i < data.length; i++) {
+    for (int j = i + 1; j < data.length; j++) {
+      for (int k = j + 1; k < data.length; k++) {
+        if (data[i] + data[j] + data[k] == target) {
+          print('Triplet: (${data[i]}, ${data[j]}, ${data[k]})');
+        }
+      }
+    }
+  }
+}
+```
+##### 🔍 Penjelasan
+Loop `i`: jalan `n` kali
+Loop `j`: jalan `n` kali untuk setiap `i`
+Loop `k`: jalan `n` kali untuk setiap `j`
+Jadi total operasi = `n × n × n` = `O(n³)`
+
+🧾 Output:
+```
+Triplet: (1, 3, 5)
+Triplet: (2, 3, 4)
+```
+##### 📊 *Perbandingan*
+
+|n    |	O(n) |	O(n²)   |	O(n³)        |
+| :---| :----| :-----   | :----------- |
+|10	  | 10	 | 100	    | 1,000        |
+|100	| 100	 | 10,000	  |1,000,000     |
+|1000 |	1000 |	1e6	    |1,000,000,000 |
+
+
+##### 💡 *Kapan O(n³) Muncul?*
+- Brute force pencarian 3 elemen
+- Algoritma graf tertentu (contoh: Floyd-Warshall untuk shortest paths)
+- Kombinasi atau permutasi 3 tingkat
+- Terkadang dalam simulasi fisika (3D), neural net yang tidak dioptimalkan, dsb.
