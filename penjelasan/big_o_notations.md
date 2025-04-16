@@ -205,3 +205,77 @@ Jadi, meskipun datanya 1 juta, paling -paling cuma butuh sekitar 20 langkah untu
         - Binary Search
         - Struktur data seperti Binary Search Tree, Heap
         - Beberapa algoritma sorting & pencarian canggih
+
+#### 4. O(n log n)
+##### *Apa itu `O(n log n)` ?*
+`O(log n)` berarti:
+<div style="margin-left: 40px;">
+  Waktu mengerjakan pekerjaan sebanyak n, dan setiap pekerjaan butuh waktu log n.
+</div> 
+Atau bisa juga dikatakan:
+<div style="margin-left: 40px;">
+  Kita melakukan log n sebanyak n kali.
+</div> 
+
+##### *Analogi Kasar*
+Banyangkan kamu punya 1000 file, dan setiap file perlu kamu kelompokkan lalu sortir isinya secara bertahap (pakai pembagian dua).
+- Proses mengelompokkan 1000 file tersebut -> `n`
+- Tapi untuk menyortir satu kelompok, kita terus bagi-bagi jadi dua sampai beres -> itulah `log n`.
+
+Jadi hasil akhirnya: `n log n`.
+##### *Contoh Paling Umum : Merge Sort dan Quick Sort (average case)*
+Contoh `Merge Sort` : 
+```dart
+List<int> mergeSort(List<int> list) {
+  if (list.length <= 1) return list;
+
+  int mid = list.length ~/ 2;
+  List<int> left = mergeSort(list.sublist(0, mid));
+  List<int> right = mergeSort(list.sublist(mid));
+
+  return merge(left, right);
+}
+
+List<int> merge(List<int> left, List<int> right) {
+  List<int> result = [];
+  int i = 0, j = 0;
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      result.add(left[i++]);
+    } else {
+      result.add(right[j++]);
+    }
+  }
+  result.addAll(left.sublist(i));
+  result.addAll(right.sublist(j));
+  return result;
+}
+```
+
+- `mergesort` membagi list jadi dua → dua lagi → dua lagi → itu `log n`.
+- Di setiap level pembagian, kita menggabungkan semua elemen  → itu `n`.
+- Total waktu `n log n`.
+
+##### *Perbandingan :*
+| n (Ukuran Data) | O(n) Langkah | O(log n) Langkah | O(n log n) Langkah|
+| :-----------    | :---------   | :--------------- | :-----------------|
+| 10              | 10           | ~ 4              | ~ 40              |
+| 100             | 100          | ~ 7              | ~ 700             |
+| 1.000           | 1.000        | ~ 10             | ~ 10.000          |
+| 1.000.000       | 1.000.000    | ~ 20             | ~ 20.000.000     | 
+
+##### *Kapan Muncul `O(n log n)` ?*
+
+Biasanya pada:
+- Algoritma sorting yang efisien:
+  - *Merge Sort*
+  - *Quick Sort (average case)*
+  - *Heap Sort*
+- Beberapa algoritma divide and conquer lain
+- Beberapa algoritma pencarian pola string
+
+##### *Inti dari `O(n log n)` :*
+- Kita punya banyak data(`n`)
+- Tapi cara kerjanya **melibatkan pembagian logaritmik** (`log n`)
+- Jadi jauh **lebih cepat dari  O(n²)**, tapi masih lebih **berat dari O(n)**
+
