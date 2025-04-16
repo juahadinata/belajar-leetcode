@@ -279,3 +279,83 @@ Biasanya pada:
 - Tapi cara kerjanya **melibatkan pembagian logaritmik** (`log n`)
 - Jadi jauh **lebih cepat dari  O(n²)**, tapi masih lebih **berat dari O(n)**
 
+#### 5. O(n²)
+
+##### *Apa Itu O(n²)?*
+`O(n²)` artinya:
+    Jumlah langkah atau operasi akan tumbuh sebanding dengan kuadrat jumlah data.
+
+Kalau n = 10, jumlah operasi bisa sampai 100.
+Kalau n = 1000, bisa sampai 1 juta!
+
+##### *Analogi Simpel*
+Bayangkan kamu punya 10 orang, dan setiap orang harus ngobrol dengan semua orang lainnya.
+- Orang 1 ngobrol dengan 9 orang
+- Orang 2 juga ngobrol dengan 9 (beberapa tumpang tindih)
+
+Total percakapan mendekati: `n × n`
+Itulah `O(n²)`!
+
+##### *Contoh Kasus Nyata*
+  1. Nested loop (loop dalam loop):
+  ```dart
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      // total operasi = n * n
+      print('$i, $j');
+    }
+  }
+  ```
+  2. Algoritma Bubble Sort:
+    - Setiap elemen dibandingkan dengan elemen lainnya
+    - Total perbandingan: hampir n²
+  3. Mencari pasangan yang cocok dalam data (brute force):
+    - Cek semua kombinasi dua-dua
+
+##### 🎯 *Contoh lain: Mencari Semua Pasangan Angka yang Jumlahnya Tertentu*
+Misalnya:
+Diberikan array A = [1, 2, 3, 4, 5], cari semua pasangan (a, b) yang jumlahnya 6.
+Ini solusi brute force:
+
+```dart
+void main() {
+  List<int> data = [1, 2, 3, 4, 5];
+  int target = 6;
+
+  for (int i = 0; i < data.length; i++) {
+    for (int j = i + 1; j < data.length; j++) {
+      if (data[i] + data[j] == target) {
+        print('Pasangan: (${data[i]}, ${data[j]})');
+      }
+    }
+  }
+}
+```
+💡 Penjelasan
+- Dua loop: for i dan for j
+- Loop luar = n kali
+- Loop dalam ≈ n kali juga (walaupun mulai dari i + 1, tetap proporsional)
+- Total operasi = sekitar n × n = O(n²)
+
+🧾 Output:
+```
+Pasangan: (1, 5)
+Pasangan: (2, 4)
+```
+##### *Perbandingan sederhana:*
+| n               | O(n)         | O(n log n)      | O(n²)         |
+| :-----------    | :---------   | :-------------- | :-------------|
+| 10              | 10           | ~ 33            | 100           |
+| 100             | 100          | ~ 700           | 10.000        |
+| 1.000           | 1.000        | ~ 10.000        | 1.000.000     |
+
+##### *Ciri-Ciri Kode O(n²)*
+- Punya loop dalam loop (nested)
+- Biasanya coba semua pasangan kemungkinan
+- Cocok hanya untuk data kecil
+##### *Kapan Terjadi?*
+Algoritma dengan O(n²) muncul di:
+- Sorting sederhana: Bubble sort, Insertion sort, Selection sort
+- Brute-force matching
+- Graf traversal tanpa optimasi
+- Algoritma dasar dalam kompetisi coding (kadang memang diminta pakai brute force dulu)
