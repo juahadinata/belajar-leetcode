@@ -41,12 +41,5 @@ Diberikan sebuah array `nums`, tentukan apakah array tersebut mengandung elemen 
 - Return `true` jika ada nilai yang muncul **lebih dari sekali**.
 - Return `false` jika setiap elemen **unik**.
 
-#### Contoh Input & Output
+####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/contains_duplicate.md)
 
-```dart
-Input:  nums = [1, 2, 3, 4]
-Output: false
-
-Input:  nums = [1, 2, 3, 1]
-Output: true
-```
