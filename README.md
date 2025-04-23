@@ -1,15 +1,23 @@
-## 1. Two Sum Algorithm
+#### Berikut adalah beberapa soal LeetCode yang sering muncul dalam wawancara kerja (coding interview), baik untuk pemula maupun tingkat lanjut, [lihat daftar lengkap dan daftar latihan terstruktur disini](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/soal_soal_leetcode.md)
+
+### 1. Two Sum Algorithm
 
 #### Deskripsi
 **Two Sum** adalah sebuah algoritma populer dalam pemrograman yang digunakan 
 untuk mencari dua angka dalam sebuah array yang jika dijumlahkan 
-akan menghasilkan sebuah target tertentu.  
+akan menghasilkan sebuah ```target``` tertentu.  
+
+Bayangkan seorang pemuda punya kriteria pasangan (```target```). Setiap kali bertemu seseorang (elemen dalam list), dia memeriksa apakah orang itu adalah ```complement``` yang pas. Kalau belum cocok, dia lanjut ke orang berikutnya sambil terus berharap.
+
+Ketika akhirnya bertemu seseorang yang memenuhi kriterianya (```complement``` ditemukan dalam ```map```), hatinya langsung bilang: *"Inilah dia!"* 💖 dan pencarian pun selesai!
+
+Jadi, algoritma Two Sum ini bisa dianalogikan seperti mencari pasangan, asalkan complement-nya ada. Kalau nggak ketemu? Ya, terpaksa ```return null``` alias "Jodoh tidak ditemukan".
 
 ####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/two_sum.md)
 
 ---
 
-## 2. Best Time to Buy and Sell Stock
+### 2. Best Time to Buy and Sell Stock
 
 #### Overview
 
@@ -33,7 +41,7 @@ Output: 5
 
 ---
 
-## 3. Contains Duplicate Algorithm
+### 3. Contains Duplicate Algorithm
 
 #### Deskripsi Masalah
 Diberikan sebuah array `nums`, tentukan apakah array tersebut mengandung elemen yang **duplikat**.

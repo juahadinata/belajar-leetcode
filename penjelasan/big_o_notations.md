@@ -402,9 +402,10 @@ void main() {
 }
 ```
 ##### 🔍 Penjelasan
-Loop `i`: jalan `n` kali
-Loop `j`: jalan `n` kali untuk setiap `i`
-Loop `k`: jalan `n` kali untuk setiap `j`
+- Loop `i`: jalan `n` kali
+- Loop `j`: jalan `n` kali untuk setiap `i`
+- Loop `k`: jalan `n` kali untuk setiap `j`
+
 Jadi total operasi = `n × n × n` = `O(n³)`
 
 🧾 Output:
