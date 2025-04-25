@@ -9,11 +9,11 @@ akan menghasilkan sebuah ```target``` tertentu.
 
 Bayangkan seorang pemuda punya kriteria pasangan (```target```). Setiap kali bertemu seseorang (elemen dalam list), dia memeriksa apakah orang itu adalah ```complement``` yang pas. Kalau belum cocok, dia lanjut ke orang berikutnya sambil terus berharap.
 
-Ketika akhirnya bertemu seseorang yang memenuhi kriterianya (```complement``` ditemukan dalam ```map```), hatinya langsung bilang: *"Inilah dia!"* 💖 dan pencarian pun selesai!
+Ketika akhirnya bertemu seseorang yang memenuhi kriterianya (```complement``` ditemukan dalam ```map```), hatinya langsung berkata: *"Inilah dia!"* 💖 dan pencarian pun usai sudah!
 
 Jadi, algoritma Two Sum ini bisa dianalogikan seperti mencari pasangan, asalkan complement-nya ada. Kalau nggak ketemu? Ya, terpaksa ```return null``` alias "Jodoh tidak ditemukan".
 
-####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/two_sum.md)
+#####  [Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/two_sum.md)
 
 ---
 
@@ -24,6 +24,7 @@ Jadi, algoritma Two Sum ini bisa dianalogikan seperti mencari pasangan, asalkan 
 **Best Time to Buy and Sell Stock** adalah salah satu masalah klasik dalam wawancara coding. 
 Soal ini sangat cocok untuk menguji pemahaman tentang array, algoritma greedy, 
 dan pengambilan keputusan optimal dalam satu kali iterasi.
+*Bisa dianalogikan kapan waktu yang tepat untuk membeli saham dan kapan menjualnya.*
 
 
 #### Aturan:
@@ -37,7 +38,7 @@ Input:  prices = [7, 1, 5, 3, 6, 4]
 Output: 5
 ``` 
 
-####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/besttime_to_buy_and_sell_stck.md)
+#####  [Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/besttime_to_buy_and_sell_stck.md)
 
 ---
 
@@ -49,5 +50,38 @@ Diberikan sebuah array `nums`, tentukan apakah array tersebut mengandung elemen 
 - Return `true` jika ada nilai yang muncul **lebih dari sekali**.
 - Return `false` jika setiap elemen **unik**.
 
-####  [ Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/contains_duplicate.md)
+#####  [Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/contains_duplicate.md)
+---
 
+### 4. Valid Palindrome
+#### Apa itu Valid Palindrome?
+Palindrome adalah sebuah kata, frasa, angka, atau urutan karakter yang dibaca sama baik dari depan maupun belakang, mengabaikan spasi, tanda baca, dan kapitalisasi huruf.
+
+Contoh:
+- "Kasur nababan rusak" → Palindrome ✅
+- "race a car" → Bukan palindrome ❌
+
+#### Tujuan Algoritma Valid Palindrome
+Memeriksa apakah sebuah string merupakan palindrome dengan mengabaikan karakter non-alphanumeric (seperti koma, spasi, titik, dll.) dan tidak membedakan huruf besar-kecil.
+
+#####  [Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/valid_palindrome.md)
+---
+
+### 5. Maximum Subarray
+##### Apa itu Maximum Subarray Problem?
+Maximum Subarray adalah masalah klasik dalam algoritma, di mana kita diminta untuk mencari subarray (bagian berurutan dari array) yang memiliki jumlah (sum) terbesar.
+
+##### Contoh:
+Misal kita punya array:
+```dart
+[-2, 1, -3, 4, -1, 2, 1, -5, 4]
+```
+Subarray dengan jumlah terbesar adalah:
+```dart
+[4, -1, 2, 1] → total = 6
+```
+🎯 Tujuan:
+Mencari jumlah maksimum dari subarray berurutan.
+
+#####  [Baca Selengkapnya](https://github.com/juahadinata/belajar-leetcode/blob/main/penjelasan/maximum_subarray.md)
+---
